@@ -1,0 +1,2809 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        html {
+            font-size: 16px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+        body {
+            padding: 50px;
+            max-width: 700px;
+            width: 700px;
+        }
+        .page {
+            overflow: hidden;
+            page-break-after: always;
+            margin-bottom: 250px;
+        }
+        h1 {
+            margin-top: 0.25rem;
+            font-size: 1.5rem;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-3 {
+            width: 25%;
+            float:left;
+        }
+        .col-4 {
+            width: 33.33%;
+            float:left;
+        }
+        .col-12 {
+            width: 100%;
+            float: left;
+        }
+        .param {
+            font-size: 0.875rem;
+            font-weight: normal;
+            word-break: break-word;
+        }
+
+        .color-blocker, .color-critical, .color-major, .color-high {
+            color: #D0021B;
+        }
+
+        .conditions-header {
+            font-size: 0.875rem;
+            font-weight: bold;
+            padding-bottom: 0.25rem;
+        }
+
+        .conditions-data {
+            font-weight: normal;
+            font-size: 0.875rem;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .data-row {
+            margin-top: 1rem;
+        }
+
+        .table-steps table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-steps table td, .table-steps table th {
+            border: 1px solid;
+            padding: 5px 8px;
+        }
+
+        .table-steps img {
+            max-height: 500px;
+        }
+
+        .table-steps {
+            width: 100%;
+        }
+        .table-steps td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #dedede;
+        }
+        .table-steps th {
+            font-size: 0.875rem; text-align: left;
+        }
+        .table-steps p {
+            margin-bottom: 0;
+        }
+        .steps ol, .steps ul {
+            margin-bottom: 0;
+            padding-left: 1.125rem;
+        }
+        .steps li {
+            font-size: 0.875rem;
+        }
+
+        .step-position span {
+            padding: .25rem 0.75rem;
+            display: block;
+            margin-right: .75rem;
+            border-radius: .25rem;
+            color: #636363;
+            background: #f3f3f3;
+        }
+
+        .step-action p {
+            display: none;
+        }
+
+        .step-content p.data {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+        .description p{
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+
+        .table-steps img,
+        .description img,
+        .markdown img,
+        .steps img {
+            max-width: 100%;
+        }
+
+        .attachments {vertical-align: top;}
+        .attachments .attachment{width:96px;display:inline-block; margin-right: 8px; vertical-align: top}
+        .attachments .attachment-image{width:96px;height:96px;border-radius:6px;background-size:cover !important;}
+        .attachments .attachment-file{width:96px;height:96px;background:#e9e9e9;border-radius:6px;}
+        .attachments .attachment-file .attachment-extension{display:inline-block; text-decoration:none !important;font-weight:500;color:#000; padding-left: 8px; padding-top: 8px; font-size: 0.75rem;}
+        .attachments .attachment .attachment-filename{width:96px;display:block; text-overflow:ellipsis;white-space:nowrap;margin-top:0.5rem;overflow:hidden;text-decoration:none;color:#656565;font-size:0.625rem;}
+        .attachments .attachment a {text-decoration:none !important;border-bottom: 0;}
+    </style>
+    <link rel="stylesheet" href="https://app.qase.io/assets/main/css/fontawesome.min.css?1675190098">
+</head>
+<body>
+                                                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-1
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> The Test bench is available</h1>
+        <div class="description"><p>Web app <a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a> is available.</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to <a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Resource is available.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check Status code of response <a href="https://securepubads.g.doubleclick.net/pagead/ppub_config?ippd=demo.guru99.com" target="_blank">https://securepubads.g.doubleclick.net/pagead/ppub_config?ippd=demo.guru99.com</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Status code: 200</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-2
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Main page contains header &quot;Guru99 Telecom&quot;</h1>
+        <div class="description"><p>The "Add Customer" page contains header "Guru99 Telecom". Redirect to Main page after clicking to it.</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not Needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not Needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to page. <a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Web app is available. Page is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Header "Guru99 Telecom" in top of the page.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Header "Guru99 Telecom" in top of the page. It has #f6755e color. (Use DevTools to check it)</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Guru99 Telecom" header.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Redirecting to Main page <a href="https://demo.guru99.com/telecom/index.html" target="_blank">https://demo.guru99.com/telecom/index.html</a></p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-3
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> &quot;Background check&quot; module</h1>
+        <div class="description"><p>Checking "Background check" module:</p>
+<ol>
+<li>Only 1 radio-button might be checked</li>
+<li>Check mark is white on coral background</li>
+</ol></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to <a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is open. Radio-buttons in "Background check" module does not checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Choose "Done" in "Background check" module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-button "Done" becomes coral with white check mark. (Like on picture in attach)</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-1ac6d3f9f2ba34e95b94ecfabcdf5ff75c8e06e6">
+                        <a target="_blank" title="Screenshot_1.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/1ac6d3f9f2ba34e95b94ecfabcdf5ff75c8e06e6/Screenshot_1.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/1ac6d3f9f2ba34e95b94ecfabcdf5ff75c8e06e6/Screenshot_1.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Choose "Pending" in "Background check" module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-button "Done" becomes unchecked (transparent), Radio-button "Pending" becomes coral with white check mark.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-4
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> &quot;Billing address&quot; module</h1>
+        <div class="description"><p>Checking "Billing address" module:</p>
+<ol>
+<li>Contains "First name", "Last name", "Email", "Address", "Mobile number" inputs</li>
+<li>Contains "Submit", "Reset" buttons.</li>
+<li>Check UI responses of elements.</li>
+</ol></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is open. It has "Billing address" module.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check "Billing address" module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>The "Billing address" module has input fields "First name", "Last name", "Email", "Address", "Mobile number" in order as shown in attached picture</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-acd8cd7725b86fd1f06061cf0668759ba86c9fd0">
+                        <a target="_blank" title="Screenshot_2.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/acd8cd7725b86fd1f06061cf0668759ba86c9fd0/Screenshot_2.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/acd8cd7725b86fd1f06061cf0668759ba86c9fd0/Screenshot_2.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click in any input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Field is outlined in blue as shown in the picture in attach</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-1256fef5ecab360693fb0e397e349c9d791033d8">
+                        <a target="_blank" title="Screenshot_3.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/1256fef5ecab360693fb0e397e349c9d791033d8/Screenshot_3.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/1256fef5ecab360693fb0e397e349c9d791033d8/Screenshot_3.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Hover mouse on "Submit" and "Reset" buttons.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Buttons change color on hover. Example in attach</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-faaf6c7c1d0450c4477329326e51ede0347c32c9">
+                        <a target="_blank" title="ScreenRecorderProject8_1.mp4" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/faaf6c7c1d0450c4477329326e51ede0347c32c9/ScreenRecorderProject8_1.mp4" style="display: block">
+                                                            <div class="attachment-file">
+                                    <span class="attachment-extension">mp4</span>
+                                </div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-6
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Adding &quot;Pending&quot; Customer with right data</h1>
+        <div class="description"><p>Adding Customer with right data. Background Check is "Done"</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to <a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>"Add Customer" site is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check "Pending" in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-buttons "Done" is checked, "Pending" is not checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in all user data to all input fields of the page</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields are filled. No any warnings on the page.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Submit" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Redirecting to <a href="https://demo.guru99.com/telecom/access.php?uid=XXXXXX" target="_blank">https://demo.guru99.com/telecom/access.php?uid=XXXXXX</a> , where XXXXXX new customers ID</p></td>
+</tr>
+                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check the page content</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/access.php?uid=XXXXXX" target="_blank">https://demo.guru99.com/telecom/access.php?uid=XXXXXX</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page contains:</p>
+<ol>
+<li>Logo &quot;Guru99 Telecom&quot;</li>
+<li>Header &quot;Access Details to Guru99 Telecom&quot;</li>
+<li>Table with Customer ID consisting of 6 digits</li>
+<li>Note &quot;<strong>Please Note Down Your CustomerID&quot;</strong></li>
+<li>Button &quot;Home&quot;</li>
+</ol></td>
+</tr>
+                                                                                            <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click "Home" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Redirect to main page</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-5
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Adding &quot;Done&quot; Customer with right data</h1>
+        <div class="description"><p>Adding Customer with right data. Background Check is "Done"</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>"Add Customer" site is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check "Done" in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-buttons "Done" is checked, "Pending" is not checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in all user data to all input fields of the page</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields are filled. No any warnings on the page.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Submit" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Redirecting to <a href="https://demo.guru99.com/telecom/access.php?uid=XXXXXX" target="_blank">https://demo.guru99.com/telecom/access.php?uid=XXXXXX</a> , where XXXXXX new customers ID</p></td>
+</tr>
+                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check the page content</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/access.php?uid=XXXXXX" target="_blank">https://demo.guru99.com/telecom/access.php?uid=XXXXXX</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page contains:</p>
+<ol>
+<li>Logo &quot;Guru99 Telecom&quot;</li>
+<li>Header &quot;Access Details to Guru99 Telecom&quot;</li>
+<li>Table with Customer ID consisting of 6 digits</li>
+<li>Note &quot;<strong>Please Note Down Your CustomerID&quot;</strong></li>
+<li>Button &quot;Home&quot;</li>
+</ol></td>
+</tr>
+                                                                                            <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click "Home" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Redirect to main page</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-7
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Adding Customer without Background Check -</h1>
+        <div class="description"><p>Adding new Customer without Background Check. The both radio-buttons are not checked.</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>"Add Customer" site is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check nothing in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-buttons "Done" and "Pending" are not checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in all user data to all input fields of the page</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields are filled. No any warnings on the page.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Submit" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Appeared popup with "Please fill all fields" warning</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-8
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Field name becomes bold when not empty-</h1>
+        <div class="description"><p>Checking labels and placeholders of input fields</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-down color-low"></i> Low</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>"Add Customer" site is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check all input fields for names and placeholders availability</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields has names and placeholders.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in "Last name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Name of field became bold</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-9
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Input in &quot;... name&quot; input fields allowed symbols</h1>
+        <div class="description"><p>Checking Firstname and Lastname input fields for allowed symbols</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer, Symbols</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is opened</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check "Done" in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-button "Done" is checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in digits in "First name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Numbers are not allowed" is showed under "First name" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in special characters in "First name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Special characters are not allowed" is showed under "First name" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in special characters and digits in "First name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Special characters are not allowed" is showed under "First name" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in digits in "Last name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Numbers are not allowed" is showed under "Last name" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in special characters in "Last name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Special characters are not allowed" is showed under "Last name" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">8</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in special characters and digits in "Last name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Special characters are not allowed" is showed under "Last name" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">9</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in right data in "First name" and "Last name" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-10
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Input Right data to &quot;Email&quot; field</h1>
+        <div class="description"><p>Checking "Email" input fields for allowed symbols</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer, Symbols</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is opened</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check "Pending" in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-button "Pending" is checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in email address using digits and Latin characters in "Email" input field, then press click out of input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Email address shows in Email input field. No warnings found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in right data in "First name", "Last name", "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All inputs are filled in.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Submit button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>No warnings found. Redirecting to <a href="https://demo.guru99.com/telecom/access.php?uid=XXXXXX" target="_blank">https://demo.guru99.com/telecom/access.php?uid=XXXXXX</a> , where XXXXXX new customers ID</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click "Home" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Redirecting to main page</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-11
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> &quot;Email&quot; input field has mask -</h1>
+        <div class="description"><p>Checking "Email" input fields for mask presence</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Symbols</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is opened</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check "Pending" in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Radio-button "Pending" is checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in right email address in "Email" input field.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Email address shows in Email input field. No warnings found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Delete "@" from email address</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Under Email input field shows warning: "Email-ID is not valid"</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in right email address in "Email" input field.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Email address shows in Email input field. No warnings found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Delete "." from email address</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Under Email input field shows warning: "Email-ID is not valid"</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in right email address in "Email" input field.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Email address shows in Email input field. No warnings found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">8</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Add "space" before right email address</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Under Email input field shows warning: "First character can not have space"</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">9</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Submit" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Shows popup "Please fill all fields"</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-12
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Input allowed symbols in &quot;Address&quot; input field -</h1>
+        <div class="description"><p>Checking Address input fields for allowed symbols</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer, Symbols</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is opened</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in digits in "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in special characters in "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in special characters and digits in "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in right data in "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in 100 symbols in "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in 101 symbols in "Address" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Cant fill more then 100 symbols. Warning "Maximum 100 symbols" is shown.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-13
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Checking &quot;Mobile Number&quot; input fields for allowed symbols</h1>
+        <div class="description"><p>Checking "Mobile Number" input fields for allowed symbols</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer, Symbols</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Page is opened</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in real telephone number in "Mobile Number" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>+79876543211</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in real telephone number w/o "+" in "Mobile Number" input field</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>79876543211</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Data shows in input fields. No warnings are found.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in short(5 digits) telephone number in "Mobile Number" input field.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>example: 34344</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Warning "Tel no too short" is shown under "Mobile Number" input field</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in long (16 digits) telephone number in "Mobile Number" input field.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>example: 1234567890123456</p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Cant fill more then 15 symbols. Warning "Maximum 15 symbols" is shown.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-14
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Testing &quot;Reset&quot; button</h1>
+        <div class="description"><p>Resetting all data and warning messages from fields</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>"Add Customer" site is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check any position in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Selected Radio-button is checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in all user data to all input fields of the page</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields are filled. No any warnings on the page.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Reset" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All data from all text fields are deleted. Selected Radio-buttons does not checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check any position in Background Check module</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Selected Radio-button is checked.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in all user data to all input fields of the page except one any field.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields are filled except one. 1 warning on the page.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Reset" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All data from all text fields are deleted. Selected Radio-buttons does not checked. All warning does not showed.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-15
+                            / Testing Documentation / Testing Documentation Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Checking required input fields</h1>
+        <div class="description"><p>Checking "*" marks of input fields</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-down color-low"></i> Low</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                                                    <div class="data-row">
+                        <div class="conditions-header">Post-conditions</div>
+                        <div class="conditions-data markdown"><p>Not needed</p></div>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Add Customer</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Go to</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p><a href="https://demo.guru99.com/telecom/addcustomer.php" target="_blank">https://demo.guru99.com/telecom/addcustomer.php</a></p></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>"Add Customer" site is opened.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Fill in all input fields with right data</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>All input fields are filled. No any warnings on the page.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Delete data from any field with "*" mark</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Under input field with erased data shows warning: "*type of user data* must not be blank"</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on the "Submit" button</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Shows popup "Please fill all fields"</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                                                                                                                                                                                                                    </body>
+</html>

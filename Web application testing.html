@@ -1,0 +1,2284 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        html {
+            font-size: 16px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+        body {
+            padding: 50px;
+            max-width: 700px;
+            width: 700px;
+        }
+        .page {
+            overflow: hidden;
+            page-break-after: always;
+            margin-bottom: 250px;
+        }
+        h1 {
+            margin-top: 0.25rem;
+            font-size: 1.5rem;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-3 {
+            width: 25%;
+            float:left;
+        }
+        .col-4 {
+            width: 33.33%;
+            float:left;
+        }
+        .col-12 {
+            width: 100%;
+            float: left;
+        }
+        .param {
+            font-size: 0.875rem;
+            font-weight: normal;
+            word-break: break-word;
+        }
+
+        .color-blocker, .color-critical, .color-major, .color-high {
+            color: #D0021B;
+        }
+
+        .conditions-header {
+            font-size: 0.875rem;
+            font-weight: bold;
+            padding-bottom: 0.25rem;
+        }
+
+        .conditions-data {
+            font-weight: normal;
+            font-size: 0.875rem;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .data-row {
+            margin-top: 1rem;
+        }
+
+        .table-steps table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-steps table td, .table-steps table th {
+            border: 1px solid;
+            padding: 5px 8px;
+        }
+
+        .table-steps img {
+            max-height: 500px;
+        }
+
+        .table-steps {
+            width: 100%;
+        }
+        .table-steps td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #dedede;
+        }
+        .table-steps th {
+            font-size: 0.875rem; text-align: left;
+        }
+        .table-steps p {
+            margin-bottom: 0;
+        }
+        .steps ol, .steps ul {
+            margin-bottom: 0;
+            padding-left: 1.125rem;
+        }
+        .steps li {
+            font-size: 0.875rem;
+        }
+
+        .step-position span {
+            padding: .25rem 0.75rem;
+            display: block;
+            margin-right: .75rem;
+            border-radius: .25rem;
+            color: #636363;
+            background: #f3f3f3;
+        }
+
+        .step-action p {
+            display: none;
+        }
+
+        .step-content p.data {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+        .description p{
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+
+        .table-steps img,
+        .description img,
+        .markdown img,
+        .steps img {
+            max-width: 100%;
+        }
+
+        .attachments {vertical-align: top;}
+        .attachments .attachment{width:96px;display:inline-block; margin-right: 8px; vertical-align: top}
+        .attachments .attachment-image{width:96px;height:96px;border-radius:6px;background-size:cover !important;}
+        .attachments .attachment-file{width:96px;height:96px;background:#e9e9e9;border-radius:6px;}
+        .attachments .attachment-file .attachment-extension{display:inline-block; text-decoration:none !important;font-weight:500;color:#000; padding-left: 8px; padding-top: 8px; font-size: 0.75rem;}
+        .attachments .attachment .attachment-filename{width:96px;display:block; text-overflow:ellipsis;white-space:nowrap;margin-top:0.5rem;overflow:hidden;text-decoration:none;color:#656565;font-size:0.625rem;}
+        .attachments .attachment a {text-decoration:none !important;border-bottom: 0;}
+    </style>
+    <link rel="stylesheet" href="https://app.qase.io/assets/main/css/fontawesome.min.css?1675190098">
+</head>
+<body>
+                                                                                                                                                                            <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-96
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Guest User - в хедере есть возможность зарегистироваться и войти</h1>
+        <div class="description"><p>На сайте <a href="https://demowebshop.tricentis.com/" target="_blank">https://demowebshop.tricentis.com/</a> в хедере есть возможность зарегистироваться и войти</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Отключены блокираторы рекламы.</li>
+<li>Локаль - RU</li>
+<li>Browser - Chrome ver >= 107</li>
+<li>Сетевое соединение 3G и выше</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">Accessibility</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на <a href="https://demowebshop.tricentis.com/" target="_blank">https://demowebshop.tricentis.com/</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Сайт загрузился</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Убедиться что не произошел автологин, если нет - разлогиниться</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В хедере сайта есть линки "Register" и "Log in"</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-97
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Register - При регистрация нового пользователя формы и элементы отображаются корректно</h1>
+        <div class="description"><p>Регистрация нового пользователя в системе</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Chrome browser >=107</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">login, registration</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на главную</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Главная страница загрузилась</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на страницу регистрации нового пользователя</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Страница загрузиась, верстка не нарушена</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-de0de67bef7b72a26b1db689b46486ad1f16bcff">
+                        <a target="_blank" title="Screenshot_8.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/de0de67bef7b72a26b1db689b46486ad1f16bcff/Screenshot_8.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/de0de67bef7b72a26b1db689b46486ad1f16bcff/Screenshot_8.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Оставить поля пустыми и нажать кнопку Register</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появились аллерты как на аттаче</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-e9dcd68dded5e29300523b5c81737da268b91576">
+                        <a target="_blank" title="Screenshot_9.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/e9dcd68dded5e29300523b5c81737da268b91576/Screenshot_9.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/e9dcd68dded5e29300523b5c81737da268b91576/Screenshot_9.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить поля верными данными но не выбрать пол и завершить регистрацию.</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился аллерт о необходимости выбора пола</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-98
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Password Restore - Получение аллерта о вводе не валидных данных при восстановлении пароля</h1>
+        <div class="description"><p>Восстановление пароля от учетной записи</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Пользователь зарегистрирован</li>
+<li>e-mail доступен</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Разлогиниться на сайте</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В хедере отображается Register и Log in</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-2c7ece093e0624852c16e960f4b63809a3ea92ec">
+                        <a target="_blank" title="Screenshot_10.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/2c7ece093e0624852c16e960f4b63809a3ea92ec/Screenshot_10.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/2c7ece093e0624852c16e960f4b63809a3ea92ec/Screenshot_10.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти по линке <a href="https://demowebshop.tricentis.com/login" target="_blank">Log in</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница <a href="https://demowebshop.tricentis.com/login" target="_blank">https://demowebshop.tricentis.com/login</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти по линке <a href="https://demowebshop.tricentis.com/passwordrecovery" target="_blank">Forgot password?</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница<br />
+<a href="https://demowebshop.tricentis.com/passwordrecovery" target="_blank">https://demowebshop.tricentis.com/passwordrecovery</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести НЕ зарегистрированный адрес и нажать на кнопку Recover</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился аллерт "Email not found."</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-99
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Password Restore - Успешное восстановлении пароля при вводе валидных данных</h1>
+        <div class="description"><p>Восстановление пароля от учетной записи</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Пользователь зарегистрирован</li>
+<li>e-mail доступен</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Разлогиниться на сайте</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В хедере отображается Register и Log in</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-2c7ece093e0624852c16e960f4b63809a3ea92ec">
+                        <a target="_blank" title="Screenshot_10.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/2c7ece093e0624852c16e960f4b63809a3ea92ec/Screenshot_10.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/2c7ece093e0624852c16e960f4b63809a3ea92ec/Screenshot_10.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти по линке <a href="https://demowebshop.tricentis.com/login" target="_blank">Log in</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница <a href="https://demowebshop.tricentis.com/login" target="_blank">https://demowebshop.tricentis.com/login</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти по линке <a href="https://demowebshop.tricentis.com/passwordrecovery" target="_blank">Forgot password?</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница<br />
+<a href="https://demowebshop.tricentis.com/passwordrecovery" target="_blank">https://demowebshop.tricentis.com/passwordrecovery</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести НЕ зарегистрированный адрес и нажать на кнопку Recover</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился аллерт "Email not found."</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести зарегистрированный адрес и нажать на кнопку Recover</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилсь нотификация о направлении на адрес ссылки для восстановления</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Найти ссылку в почте и перейти по ней</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма для восстановления пароля</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить форму новым паролем и подтвердить</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Форма закрылась</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">8</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Войти на сайт с новыми данными</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вход удался</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-100
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Password Restore - Получение аллерта о вводе старого пароля при восстановлении пароля</h1>
+        <div class="description"><p>Восстановление пароля от учетной записи</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Пользователь зарегистрирован</li>
+<li>e-mail доступен</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Разлогиниться на сайте</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В хедере отображается Register и Log in</p></td>
+</tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <div class="attachments">
+                                    <div class="attachment attachment-2c7ece093e0624852c16e960f4b63809a3ea92ec">
+                        <a target="_blank" title="Screenshot_10.png" href="https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/2c7ece093e0624852c16e960f4b63809a3ea92ec/Screenshot_10.png" style="display: block">
+                                                            <div class="attachment-image" style="background: url('https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/8ed64e5262108fa81f77d2c4208ce059ad524007/attachment/2c7ece093e0624852c16e960f4b63809a3ea92ec/Screenshot_10.png');"></div>
+                                                    </a>
+                    </div>
+                            </div>
+        </td>
+    </tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти по линке <a href="https://demowebshop.tricentis.com/login" target="_blank">Log in</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница <a href="https://demowebshop.tricentis.com/login" target="_blank">https://demowebshop.tricentis.com/login</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти по линке <a href="https://demowebshop.tricentis.com/passwordrecovery" target="_blank">Forgot password?</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница<br />
+<a href="https://demowebshop.tricentis.com/passwordrecovery" target="_blank">https://demowebshop.tricentis.com/passwordrecovery</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести НЕ зарегистрированный адрес и нажать на кнопку Recover</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился аллерт "Email not found."</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести зарегистрированный адрес и нажать на кнопку Recover</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилсь нотификация о направлении на адрес ссылки для восстановления</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">6</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Найти ссылку в почте и перейти по ней</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма для восстановления пароля</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">7</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Заполнить форму новым паролем и подтвердить</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Форма закрылась</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">8</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Войти на сайт с новыми данными</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Вход удался</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-90
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Shopping Cart - Успешное удаление товара</h1>
+        <div class="description"><p>Товары в корзине можно удалять, редактиировать, изменять их количество</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>В корзине лежат два товара:<br />
+Один с изменяемыми параметрами (например одежда - размер цвет)<br />
+Другой с неизменяемыми</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти в корзину</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница корзины <a href="https://demowebshop.tricentis.com/cart" target="_blank">https://demowebshop.tricentis.com/cart</a><br />
+В корзине лежат товары согласно предусловий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить количество любого товара на 5</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Количество изменилось, стоимость пересчиталась</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить количество товара на 0</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Товар удалился из корзины. (Корзина пуста, если товар в корзине был один)</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-101
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Shopping Cart - Возможность редактирования параметров товара</h1>
+        <div class="description"><p>Параметры товаров в корзине можно редактиировать.</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>В корзине лежат два товара:<br />
+Один с изменяемыми параметрами (например одежда - размер цвет)<br />
+Другой с неизменяемыми</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти в корзину</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница корзины <a href="https://demowebshop.tricentis.com/cart" target="_blank">https://demowebshop.tricentis.com/cart</a><br />
+В корзине лежат товары согласно предусловий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти в карточку товара кнопкой Edit</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась карточка товара.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить цвет или размер товара и нажать Update</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Произошел переход в корзину, параметры товара изменились на выбранные</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-102
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Shopping Cart - Невозможно изменить количество товаров на число более 10 000</h1>
+        <div class="description"><p>Товары в корзине можно изменять их количество н число большее чем есть на складе</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>В корзине лежат два товара:<br />
+Один с изменяемыми параметрами (например одежда - размер цвет)<br />
+Другой с неизменяемыми</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти в корзину</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась страница корзины <a href="https://demowebshop.tricentis.com/cart" target="_blank">https://demowebshop.tricentis.com/cart</a><br />
+В корзине лежат товары согласно предусловий</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить количество любого товара на 1000000</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>У карточки товара появился алерт "The maximum quantity allowed for purchase is 10000."</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Изменить количество любого товара на 10000</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Цена пересчиталась и соответствует количеству товара</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-89
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Shopping Cart - Переход в чекаут возможен только с чекнутыми термсами</h1>
+        <div class="description"><p>Переход к оформлению заказа возможен только с отмеченным чекбоксом "I agree with the terms of service and I adhere to them unconditionally (read)"</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Товар добавлен в корзину</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти в корзину</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открыта страница <a href="https://demowebshop.tricentis.com/cart" target="_blank">https://demowebshop.tricentis.com/cart</a></p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Убедиться что чекбокс "I agree with the terms of service and I adhere to them unconditionally" не отмечен. Нажать кнопку Checkout</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился попап "Please accept the terms of service before the next step."</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Закрыть попап, чекнуть термсы и нажать кнопку Checkout</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Произошел переход на страницу оформления товаров</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-91
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Shopping Cart - Не возможно примененить к покупке дискаунта и подарочной карты</h1>
+        <div class="description"><p>Не возможно примененить к покупке дискаунта и подарочной карты</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>В корзине лежит один или несколько товаров</li>
+<li>Пользователь авторизован</li>
+<li>Известны код дискаунта и номер подарочной карты</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">shoping cart</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести корректный номер <strong>Gift Cards</strong> и кликнуть <strong>Add gift card</strong></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Карта добавлена, присутствует арифметика по расчету итоговой цены</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Отменить <strong>Gift Card</strong></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Использование карты отменено</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести корректный <strong>Discount Code</strong> и кликнуть <strong>Apply coupon</strong></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Код принят. Присутствует скидка на товар.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести корректный номер <strong>Gift Cards</strong> и кликнуть <strong>Add gift card</strong></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился аллерт о невозможности применения подарочного сертификата и дисконта одновременно.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-92
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Shopping Cart - Стоимость доставки зависит от расстояния доставки и количества товаров</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-down color-low"></i> Low</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Пользователь авторизован</li>
+<li>Товар добавлен в корзину (один или несколько)</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Указать адрес доставки и ZIP, кликнуть на Estimate Shipping кнопку</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился подрасчет доставки</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Увеличить количество товаров и кликнуть на Estimate Shipping кнопку</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Стоимость доставки увеличилась</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать максимально удаленный адрес доставки</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Стоимость доставки увеличилась</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-88
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Checkout - Pirewise Testing - покупка товаров всеми возможными комбинациями</h1>
+        <div class="description"><p>Комбинации приведены в данной таблице<br />
+<a href="https://docs.google.com/spreadsheets/d/15Vf6ES5pkW8FDbb7oAAEDVT-GecsRizLvD_ycF1jtEI/edit#gid=985833975" target="_blank">https://docs.google.com/spreadsheets/d/15Vf6ES5pkW8FDbb7oAAEDVT-GecsRizLvD_ycF1jtEI/edit#gid=985833975</a></p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Пользователь авторизован</li>
+<li>Один или несколько товаров лежт в корзине</li>
+<li>Клик на Checkout</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div style="padding-top: 1rem;">
+                    <h3 style="font-size: 0.875rem;">Tags</h3>
+                    <span class="">chekout flow</span>
+                </div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Найти Таблицу №1 по ссылке <a href="https://docs.google.com/spreadsheets/d/15Vf6ES5pkW8FDbb7oAAEDVT-GecsRizLvD_ycF1jtEI/edit#gid=985833975" target="_blank">https://docs.google.com/spreadsheets/d/15Vf6ES5pkW8FDbb7oAAEDVT-GecsRizLvD_ycF1jtEI/edit#gid=985833975</a></p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Таблица открыта</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Провести покупку товара согласно 13 вариантам приведенным в таблице</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В случае обнаружении багов, привести номер варианта покупки в баг-репорте.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-93
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Checkout/Billing Address - В поле email можно ввести только разрешенные символы</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Ползователь залогинен</li>
+<li>В корзине есть несколько товаров</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Открыта форм заполнения данных нового адреса, заполнить все инпуты валидными значениями</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Нет предупреждений о неверных значениях</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>В поле email провести валидацию согласно <a href="https://docs.google.com/spreadsheets/d/1o-hnv_UZPI2EfIsv5yZYlHpDLkRgsrnb/edit#gid=1530074872" target="_blank">https://docs.google.com/spreadsheets/d/1o-hnv_UZPI2EfIsv5yZYlHpDLkRgsrnb/edit#gid=1530074872</a> таблице</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Все разрешенные форматы не приводят к поялвению алертов.</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-94
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Checkout/Shipping Address - Ввод нового адреса и проверка инпутов на стерильность</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            G33-95
+                            / Web App Testing / Web App Testing Румянцев Илья
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Checkout - Payment Method - Credit Card - Pirewise Testing - Оплата товара тестовыми картами всеми возможными кобинациями</h1>
+        <div class="description"><p>Оплата товара тестовыми картами всеми возможными кобинациями. Выборка пар собрана в таблице <a href="https://docs.google.com/spreadsheets/d/15Vf6ES5pkW8FDbb7oAAEDVT-GecsRizLvD_ycF1jtEI/edit#gid=985833975" target="_blank">https://docs.google.com/spreadsheets/d/15Vf6ES5pkW8FDbb7oAAEDVT-GecsRizLvD_ycF1jtEI/edit#gid=985833975</a><br />
+Данные тестовых карт здесь <a href="https://docs.assist.ru/pages/viewpage.action?pageId=5767473" target="_blank">https://docs.assist.ru/pages/viewpage.action?pageId=5767473</a></p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Пользователь зарегистрирован</li>
+<li>Пользователь авторизован</li>
+<li>Введен Shipping address</li>
+<li>Введен Billing address</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать Shipping Method - Ground, подтвердить кнопкой Continue</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Произошел переход к блоку 4 Payment method</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>В блоке Payment method выбрать Credit card, подтвердить кнопкой Continue</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Произошел переход к блоку 5 Payment Information</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Провести оплату покупки всеми вариантами карт приведенными в выборке Pirewise Testing</p></td>
+</tr>
+<tr>
+    <td>Input data</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+</tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Система оплаты работает нормально и распознает все типы карт</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                                                                                                                </body>
+</html>
